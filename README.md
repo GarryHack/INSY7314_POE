@@ -465,16 +465,8 @@ How the system addresses common threats (OWASP Top 10 aligned):
 
 ## Demonstration evidence
 
-- **Video:** `<add your video link here>`. It follows this flow:
-  1. `docker compose up --build` and `docker compose ps` (all healthy) → open http://localhost:8080
-  2. Register a freelancer and a client
-  3. Freelancer logs in → creates a gig → edits it
-  4. Client logs in → browses gigs → books the gig → sees the TXN reference
-  5. Client dashboard → booking and transaction listed
-  6. Freelancer dashboard → income, tax estimate and charts updated; open "How is this calculated?"
-  7. Security: client blocked from the freelancer dashboard; Postman 401/403/400/429; account lockout; token rejected after logout
-  8. `docker compose exec backend cat logs/security.log` → the events just performed
-  9. GitHub Actions run green; CodeQL results
+- **Video:**(https://youtu.be/9Bz9Ry-psyE). It follows this flow:
+
 - **Evidence folder:** [`evidence/`](evidence/) holds test output, ESLint reports and triage, npm audit, and log samples.
 - **Live checks recorded on 2026-11-06** (local API against Atlas):
   - Newman: 68 requests, 102 assertions, 0 failures
